@@ -12,8 +12,7 @@ import climbing from './images/climbing.png';
 import { Octokit } from "octokit";
 
 const Header = () => {
-    const [exp, setExp] = useState([])
-    const [dateused, setDateused] = useState(1)
+    const [exp, setExp] = useState(null);
     const [header, setHeader] = useState('')
 
 
@@ -61,7 +60,7 @@ const Header = () => {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                'X-RapidAPI-Key': '2b63d0f776mshc5ecfd65c820675p14a674jsn6bba437e5fdf',
+                'X-RapidAPI-Key': 'bfb2fc8e96mshe519e9271c67065p1b365ejsn6c599dc36df8',
                 'X-RapidAPI-Host': 'linkedin-profiles-and-company-data.p.rapidapi.com'
             },
             body: '{"profile_id":"uwais-ishaq-715b7418a","profile_type":"personal","contact_info":false,"recommendations":false,"related_profiles":false}'
@@ -69,30 +68,41 @@ const Header = () => {
 
         let data = await fetch('https://linkedin-profiles-and-company-data.p.rapidapi.com/profile-details', options)
         let response = await data.json()
+        return response.position_groups
 
-        setExp(response.position_groups)
 
     }
-
     useEffect(() => {
         const lastCalled = localStorage.getItem("lastCalled");
         const twoDaysAgo = new Date();
         twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
-
         if (!lastCalled || new Date(lastCalled) < twoDaysAgo) {
-            getLinkedIn3();
+            getLinkedIn3().then(res => setExp(res));
             localStorage.setItem("lastCalled", new Date().toISOString());
         } else {
             const expFromStorage = localStorage.getItem("exp");
-            if (expFromStorage) {
+            console.log(expFromStorage)
+            if (expFromStorage == 'null') {
+                getLinkedIn3().then(res => setExp(res));
+                localStorage.setItem("exp", JSON.stringify(exp));
+                console.log('hehehehe', localStorage.getItem("exp"))
+
+            }
+            else {
+                console.log("here", expFromStorage)
+
                 setExp(JSON.parse(expFromStorage));
             }
         }
     }, []);
 
+
+
     useEffect(() => {
         localStorage.setItem("exp", JSON.stringify(exp));
+        console.log(localStorage.getItem("exp"))
     }, [exp]);
+
 
     // useEffect(() => {
     //     const lastCalled = localStorage.getItem("lastCalled");
@@ -210,42 +220,6 @@ const Header = () => {
 
         </p>
     </div>
-    const expBody =
-        <div>
-            {exp.map((d, index) => (
-                <div className='expSec'>
-                    <h3>
-                        {d.profile_positions[0].title}
-                    </h3>
-                    <h4>{d.company.name}</h4>
-                    {d.date.end.month == null ? <p>{numberToMonth(d.date.start.month)} {d.date.start.year} to Current</p> :
-                        <h5>{numberToMonth(d.date.start.month)} {d.date.start.year} to {numberToMonth(d.date.end.month)} {d.date.end.year}</h5>
-
-                    }
-                    <p>
-                        {d.profile_positions[0].description}
-                    </p>
-                </div>
-            ))}
-        </div>
-
-    // const expBod =
-    //     <div>
-    //         {exp.map(function (d) {
-    //             return (
-    //                 <div className='expSec'>
-    //                     <h3>
-    //                         {d.profile_positions.title}
-    //                     </h3>
-    //                     <h4>{d.company.name}</h4>
-    //                     <h5>June 2022 – Present</h5>
-    //                     <p>
-    //                         {d.profile_positions.description}
-    //                     </p>
-    //                 </div>
-    //             )
-    //         })}
-    //     </div>
     const experienceBody =
         <div>
             <div className='expSec'>
@@ -287,6 +261,43 @@ const Header = () => {
                 </p>
             </div>
         </div>
+
+    const expBody =
+        <div>
+            {exp == null ? experienceBody : exp.map((d, index) => (
+                <div className='expSec'>
+                    <h3>
+                        {d.profile_positions[0].title}
+                    </h3>
+                    <h4>{d.company.name}</h4>
+                    {d.date.end.month == null ? <p>{numberToMonth(d.date.start.month)} {d.date.start.year} to Current</p> :
+                        <h5>{numberToMonth(d.date.start.month)} {d.date.start.year} to {numberToMonth(d.date.end.month)} {d.date.end.year}</h5>
+
+                    }
+                    <p>
+                        {d.profile_positions[0].description}
+                    </p>
+                </div>
+            ))}
+        </div>
+
+    // const expBod =
+    //     <div>
+    //         {exp.map(function (d) {
+    //             return (
+    //                 <div className='expSec'>
+    //                     <h3>
+    //                         {d.profile_positions.title}
+    //                     </h3>
+    //                     <h4>{d.company.name}</h4>
+    //                     <h5>June 2022 – Present</h5>
+    //                     <p>
+    //                         {d.profile_positions.description}
+    //                     </p>
+    //                 </div>
+    //             )
+    //         })}
+    //     </div>
 
 
     const skillBody =
@@ -345,7 +356,7 @@ const Header = () => {
                 </div>
                 <AppDisplay appId="aboutMe" title="Hey there 👋" body={aboutMeBody} />
                 <AppDisplay appId="skills" title="My Skills" body={skillBody} />
-                <AppDisplay appId="experience" title="Experience" body={exp.length > 0 ? expBody : experienceBody} />
+                <AppDisplay appId="experience" title="Experience" body={expBody} />
                 <OpenFolder appId="interestsFolder" title="Interests" body={interestsBody} />
             </div>
             <div className='test2'>

@@ -344,7 +344,7 @@ const Header = () => {
         <div className='header'>
             <div className='test'>
                 <div className='introText'>
-                    <h1>Hey There 👋<br />
+                    <h1>Hey there 👋<br />
                         My name is Uwais Ishaq<br />
                         Welcome to my Portfolio</h1>
                 </div>

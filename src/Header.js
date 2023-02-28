@@ -344,7 +344,7 @@ const Header = () => {
         <div className='header'>
             <div className='test'>
                 <div className='introText'>
-                    <h1>Hey there 👋<br />
+                    <h1>Hello 👋<br />
                         My name is Uwais Ishaq<br />
                         Welcome to my Portfolio</h1>
                 </div>
@@ -352,7 +352,7 @@ const Header = () => {
                     <h1>To find out more about me<br /> navigate through the apps </h1>
                 </div>
                 <div className='introTextNew'>
-                    <h1>UwaisIshaq<br />Student<br />Tech Enthusiast</h1>
+                    <h1>Uwais Ishaq<br />Student<br />Tech Enthusiast</h1>
                 </div>
                 <AppDisplay appId="aboutMe" title="Hey there 👋" body={aboutMeBody} />
                 <AppDisplay appId="skills" title="My Skills" body={skillBody} />

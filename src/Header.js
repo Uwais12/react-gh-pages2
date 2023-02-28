@@ -264,7 +264,7 @@ const Header = () => {
 
     const expBody =
         <div>
-            {exp == null ? experienceBody : exp.map((d, index) => (
+            {exp == 'null' ? experienceBody : exp.map((d, index) => (
                 <div className='expSec'>
                     <h3>
                         {d.profile_positions[0].title}
@@ -344,7 +344,7 @@ const Header = () => {
         <div className='header'>
             <div className='test'>
                 <div className='introText'>
-                    <h1>Hello 👋<br />
+                    <h1>Hey There 👋<br />
                         My name is Uwais Ishaq<br />
                         Welcome to my Portfolio</h1>
                 </div>

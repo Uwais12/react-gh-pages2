@@ -352,7 +352,7 @@ const Header = () => {
                     <h1>To find out more about me<br /> navigate through the apps </h1>
                 </div>
                 <div className='introTextNew'>
-                    <h1>Uwais Ishaq<br />Student<br />Tech Enthusiast</h1>
+                    <h1>UwaisIshaq<br />Student<br />Tech Enthusiast</h1>
                 </div>
                 <AppDisplay appId="aboutMe" title="Hey there 👋" body={aboutMeBody} />
                 <AppDisplay appId="skills" title="My Skills" body={skillBody} />

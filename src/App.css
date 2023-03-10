@@ -898,5 +898,10 @@ p {
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
+
   margin-top: 2em;
+}
+
+.skillbar-percent {
+  color: gray !important;
 }

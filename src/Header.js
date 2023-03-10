@@ -104,31 +104,12 @@ const Header = () => {
     }, [exp]);
 
 
-    // useEffect(() => {
-    //     const lastCalled = localStorage.getItem("lastCalled");
-
-    //     const twoDaysAgo = new Date();
-    //     twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
-
-    //     if (!lastCalled || new Date(lastCalled) < twoDaysAgo) {
-    //         getLinkedIn3();
-    //         localStorage.setItem("lastCalled", new Date().toISOString());
-    //     }
-
-
-    // }, [])
-
-    // useEffect(() => {
-    //     console.log('exp changed:', exp);
-    // }, [exp]);
-
 
 
     const colors = ['#797EF6', '#4ADEDE', '#1AA7EC', '#1E2F97', '#0044FF', '#001374']
     const skills = [
-
         {
-            type: "ReactJS",
+            type: "Python",
             level: 90,
             color: {
                 bar: colors[0],
@@ -137,12 +118,11 @@ const Header = () => {
                     text: colors[0]
                 }
 
-
             }
         },
         {
-            type: "Python",
-            level: 87,
+            type: "Java",
+            level: 85,
             color: {
                 bar: colors[1],
                 title: {
@@ -152,9 +132,10 @@ const Header = () => {
 
             }
         },
+
         {
-            type: "Java",
-            level: 80,
+            type: "Django",
+            level: 75,
             color: {
                 bar: colors[2],
                 title: {
@@ -164,21 +145,10 @@ const Header = () => {
 
             }
         },
-        {
-            type: "Django",
-            level: 75,
-            color: {
-                bar: colors[4],
-                title: {
-                    background: 'gray',
-                    text: colors[4]
-                }
 
-            }
-        },
         {
-            type: "Spark",
-            level: 75,
+            type: "SQL",
+            level: 70,
             color: {
                 bar: colors[3],
                 title: {
@@ -189,8 +159,21 @@ const Header = () => {
             }
         },
         {
-            type: "SQL",
+            type: "ReactJS",
             level: 70,
+            color: {
+                bar: colors[4],
+                title: {
+                    background: 'gray',
+                    text: colors[4]
+                }
+
+
+            }
+        },
+        {
+            type: "Spark",
+            level: 50,
             color: {
                 bar: colors[5],
                 title: {
@@ -270,7 +253,7 @@ const Header = () => {
                         {d.profile_positions[0].title}
                     </h3>
                     <h4>{d.company.name}</h4>
-                    {d.date.end.month == null ? <p>{numberToMonth(d.date.start.month)} {d.date.start.year} to Current</p> :
+                    {d.date.end.month == null ? <h5>{numberToMonth(d.date.start.month)} {d.date.start.year} to Current</h5> :
                         <h5>{numberToMonth(d.date.start.month)} {d.date.start.year} to {numberToMonth(d.date.end.month)} {d.date.end.year}</h5>
 
                     }
@@ -281,23 +264,6 @@ const Header = () => {
             ))}
         </div>
 
-    // const expBod =
-    //     <div>
-    //         {exp.map(function (d) {
-    //             return (
-    //                 <div className='expSec'>
-    //                     <h3>
-    //                         {d.profile_positions.title}
-    //                     </h3>
-    //                     <h4>{d.company.name}</h4>
-    //                     <h5>June 2022 – Present</h5>
-    //                     <p>
-    //                         {d.profile_positions.description}
-    //                     </p>
-    //                 </div>
-    //             )
-    //         })}
-    //     </div>
 
 
     const skillBody =

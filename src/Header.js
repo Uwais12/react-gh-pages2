@@ -132,9 +132,8 @@ const Header = () => {
 
             }
         },
-
         {
-            type: "Django",
+            type: "ReactJS",
             level: 75,
             color: {
                 bar: colors[2],
@@ -143,12 +142,12 @@ const Header = () => {
                     text: colors[2]
                 }
 
+
             }
         },
-
         {
-            type: "SQL",
-            level: 70,
+            type: "Django",
+            level: 75,
             color: {
                 bar: colors[3],
                 title: {
@@ -158,8 +157,9 @@ const Header = () => {
 
             }
         },
+
         {
-            type: "ReactJS",
+            type: "SQL",
             level: 70,
             color: {
                 bar: colors[4],
@@ -168,9 +168,9 @@ const Header = () => {
                     text: colors[4]
                 }
 
-
             }
         },
+
         {
             type: "Spark",
             level: 50,

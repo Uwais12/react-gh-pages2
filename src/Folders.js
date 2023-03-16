@@ -25,9 +25,9 @@ const Folders = () => {
                     <div className="smallApp">
 
                         {window.innerWidth <= 639 ?
-                            // <div className="appLogo">
-                            <img className="appLogo" src={cvphone} />
-                            // </div>
+
+                            <img className="" id='cvv' src={cvphone} />
+
                             :
                             <img className="docxIcon" src={cvIcon} />
                         }

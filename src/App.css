@@ -909,3 +909,8 @@ p {
 #cvText {
   color: white;
 }
+
+#cvv {
+  max-width: 3.5em;
+
+}

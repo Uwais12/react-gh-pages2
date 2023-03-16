@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-gh-pages2/static/css/main.6d9900cb.css",
-    "main.js": "/react-gh-pages2/static/js/main.a36419a1.js",
+    "main.css": "/react-gh-pages2/static/css/main.f3f9ab98.css",
+    "main.js": "/react-gh-pages2/static/js/main.e6b73bf0.js",
     "static/media/bg3.jpg": "/react-gh-pages2/static/media/bg3.b92298363e30d27d26e9.jpg",
     "static/media/climbing.png": "/react-gh-pages2/static/media/climbing.bfe88b1a30603a39e49c.png",
     "static/media/mail.png": "/react-gh-pages2/static/media/mail.2520baef390248445aaf.png",
@@ -16,11 +16,11 @@
     "static/media/appleLogo.png": "/react-gh-pages2/static/media/appleLogo.20a615eb92ead5a92dfa.png",
     "static/media/snkrs.png": "/react-gh-pages2/static/media/snkrs.1b46c67a977f16cf59a6.png",
     "index.html": "/react-gh-pages2/index.html",
-    "main.6d9900cb.css.map": "/react-gh-pages2/static/css/main.6d9900cb.css.map",
-    "main.a36419a1.js.map": "/react-gh-pages2/static/js/main.a36419a1.js.map"
+    "main.f3f9ab98.css.map": "/react-gh-pages2/static/css/main.f3f9ab98.css.map",
+    "main.e6b73bf0.js.map": "/react-gh-pages2/static/js/main.e6b73bf0.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d9900cb.css",
-    "static/js/main.a36419a1.js"
+    "static/css/main.f3f9ab98.css",
+    "static/js/main.e6b73bf0.js"
   ]
 }

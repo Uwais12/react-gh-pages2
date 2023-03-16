@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages2/static/css/main.6d9900cb.css",
+    "main.js": "/react-gh-pages2/static/js/main.a36419a1.js",
+    "static/media/bg3.jpg": "/react-gh-pages2/static/media/bg3.b92298363e30d27d26e9.jpg",
+    "static/media/climbing.png": "/react-gh-pages2/static/media/climbing.bfe88b1a30603a39e49c.png",
+    "static/media/mail.png": "/react-gh-pages2/static/media/mail.2520baef390248445aaf.png",
+    "static/media/macFolder.png": "/react-gh-pages2/static/media/macFolder.c934b09b4b8601aeb436.png",
+    "static/media/openFolder.png": "/react-gh-pages2/static/media/openFolder.c184b5dc5683b497ca10.png",
+    "static/media/linkedin.png": "/react-gh-pages2/static/media/linkedin.ffe62c4a577ce0b94d02.png",
+    "static/media/github.png": "/react-gh-pages2/static/media/github.fe8a2b6a0f65addf8615.png",
+    "static/media/CV_UwaisIshaq.pdf": "/react-gh-pages2/static/media/CV_UwaisIshaq.2f4fedb79e38ec16f1d7.pdf",
+    "static/media/me.jpeg": "/react-gh-pages2/static/media/me.d6ea383f841f4d8552b1.jpeg",
+    "static/media/cvphone.png": "/react-gh-pages2/static/media/cvphone.d9b715a652767035c9a2.png",
+    "static/media/macDocxIcon.png": "/react-gh-pages2/static/media/macDocxIcon.da25bfb999cd1ba838f8.png",
+    "static/media/appleLogo.png": "/react-gh-pages2/static/media/appleLogo.20a615eb92ead5a92dfa.png",
+    "static/media/snkrs.png": "/react-gh-pages2/static/media/snkrs.1b46c67a977f16cf59a6.png",
+    "index.html": "/react-gh-pages2/index.html",
+    "main.6d9900cb.css.map": "/react-gh-pages2/static/css/main.6d9900cb.css.map",
+    "main.a36419a1.js.map": "/react-gh-pages2/static/js/main.a36419a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d9900cb.css",
+    "static/js/main.a36419a1.js"
+  ]
+}
